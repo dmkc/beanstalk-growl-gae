@@ -30,7 +30,7 @@ class Beanstalk(webapp.RequestHandler):
             person_url=self.NOTIFY_URL + p + api_url
             # build a POST data string for notify.io
             data=urllib.urlencode(
-                    [("title", obj['author_full_name']+" committed revision "+
+                    [("title", obj['author_full_name']+" committed r"+
                                unicode(obj['revision']) ),
                      ("text",  '\"'+obj['message']+'\"'),
                      ("icon",  "http://i.imgur.com/VsJyM.png"),
